@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        body{font-family: 'Noto Sans KR',sans-serif;
+             color: black; line-height: 1.6;}
+        img{width: 100%; display: block; }
+        a{text-decoration: none; color: #333;}
+        .logo img{height: 36px; width: auto; display: block;}
+        .header-inner{display: flex; justify-content: space-between;
+                      align-items: center; padding: 30px 8%; margin: 0 auto; max-width: 1600px}
+        nav a{margin-left: 39px;; font-size: 16px; font-weight: 700; color: #444}
+        main{width: 100%; height: 700px; background: url(index0/banner1.png) no-repeat center/cover;}
+        .category-box {padding: 0px 8% 50px; margin-top: 20px;}
+        .ct1 { display: flex; justify-content: center; gap: 60px; }
+        .c1 { width: 150px; text-align: center; }
+        .c1 img {width: 100%; border-radius: 50%; margin-bottom: 20px; aspect-ratio: 1 / 1; object-fit: cover}
+        .c1 p{font-size: 20px; font-weight: bold; color: #333;}
+        .best-wrap h1, p{text-align: center;}
+        .h1{margin-top: 20px;}
+        .category-list { list-style: none; display: flex; justify-content: center; gap: 15px; margin: 40px 0;}
+        .category-list a { padding: 12px 25px; background-color: #f4f4f4;
+         color: #555; border-radius: 30px; font-weight: bold; font-size: 16px;}
+        .category-list a.active { background-color: #1a5c1a; color: white;}
+        .best {display: flex; justify-content: center;}
+        .best-box{width: 22%; padding: 10px; }
+        .best img{width: 100%; height: 500px; object-fit: cover; border-radius: 5px;}
+        .best-wrap {max-width: 1600px; margin: 0 auto;}
+        .best p{text-align: left; font-size: 20px; font-weight: 600; margin-top: 10px;}
+        .new-menu {max-width: 1600px; margin: 0 auto;}
+        .new-menu h1, p{text-align: center;}
+        .new-menu h1 {font-size: 32px; font-weight: 800; color: #222; margin-bottom: 10px;}
+        .new {display: flex; justify-content: center; margin-top: 40px;}
+        .new-box{width: 22%; padding: 10px;}
+        .new img{width: 100%; height: 500px; object-fit: cover; border-radius: 5px;}
+        .new p{text-align: left; font-size: 20px; font-weight: 600; margin-top: 10px;}
+        .subbanner {height: 200px; background: url(index0/서브배너.jpg) no-repeat center/cover; margin: 70px;}
+        .subbanner2 {height: 200px; background: url(index0/sub1.jpg) no-repeat center/cover; margin: 70px;}
+        .banner-wrap {display: flex; justify-content: space-between; gap: 40px; margin: 0px auto; max-width: 1400px; padding: 0 10px; }
+        .subbanner3, .subbanner4 {flex: 1; height: 320px; overflow: hidden;  border-radius: 10px;}
+        .subbanner3 img, .subbanner4 img{width: 100%; height: auto;object-fit: cover; display: block;}
+        footer {display: flex !important; gap: 80px !important; padding: 50px 8% !important;
+                margin-top: 60px; border-top: 1px solid #eee;}
+        .footer-item1 { width: 30%; }
+        .footer-item2 { width: 70%; }
+        .footer-item1, .footer-item2, 
+        .footer-item1 p, .footer-item2 p, 
+        .footer-item1 h2, .footer-item1 h4, .footer-item2 h4 { text-align: left !important; }
+        .footer-item1 h4 { font-size: 14px; margin-bottom: 10px; }
+        .footer-item1 h2 { font-size: 32px; margin-bottom: 5px; }
+        .footer-item1 .email { font-size: 16px; font-weight: bold; margin-bottom: 20px; }
+        .footer-item1 .time p { font-size: 13px; color: #666; margin-bottom: 5px; }
+        .footer-item2 h4 { font-size: 14px; color: #333; margin-bottom: 15px; }
+        .footer-item2 .info p { font-size: 13px; color: #888; margin-bottom: 5px; }
+        .footer-item2 .links { margin: 20px 0 10px; font-size: 13px; color: #888; }
+        .footer-item2 .links a { color: #888; text-decoration: none; }
+        .footer-item2 .links a b { color: #333; }
+        .footer-item2 .copy { font-size: 12px; color: #bbb; }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="index0/logo.svg" alt="로고이미지">
+                </a>
+            </div>
+        <nav>
+            <a href="#">마이페이지</a> <a href="#">장바구니</a>
+            <a href="#">회원가입</a> <a href="#">로그인</a>
+        </nav>
+        </div>
+    </header>
+    <main></main>
+    <section class="category-box">
+        <div class="ct1">
+            <div class="c1"><img src="index0/1.jpg"><p>저당반찬</p></div>
+            <div class="c1"><img src="index0/2.jpg"><p>알뜰반찬</p></div>
+            <div class="c1"><img src="index0/3.jpg"><p>어린이반찬</p></div>
+            <div class="c1"><img src="index0/4.jpg"><p>비빔밥</p></div>
+            <div class="c1"><img src="index0/5.jpg"><p>신제품</p></div>
+        </div>
+    </section>
+    <section class="best-wrap">
+        <h1>인기있는 반찬</h1>
+        <p>가장 인기있는 제품만 골라드려요.</p>
+        <ul class="category-list">
+            <li><a href="#" class="active">메인요리</a></li>
+            <li><a href="#">부침</a></li>
+            <li><a href="#">볶음</a></li>
+            <li><a href="#">조림</a></li>
+            <li><a href="#">국/찌개/탕</a></li>
+            <li><a href="#">비빔밥</a></li>
+        </ul>
+        <div class="best">
+            <div class="best-box"><img src="index0/main1.jpg"><p>쭈꾸미 미나리 파스타</p></div>
+            <div class="best-box"><img src="index0/main2.jpg"><p>한끼 한돈 김치두루치기_완조리</p></div>
+            <div class="best-box"><img src="index0/main3.jpg"><p>잡채</p></div>
+            <div class="best-box"><img src="index0/main4.jpg"><p>한끼 한돈제육_완조리</p></div>
+        </div>
+    </section>
+    <section class="subbanner"></section>
+    <section class="new-menu">
+        <h1>새로 나온 반찬</h1>
+        <p>가장 새로나온 제품만 골라드려요.</p>
+        <div class="new">
+            <div class="new-box"><img src="index0/main1.jpg"><p>쭈꾸미 미나리 파스타</p></div>
+            <div class="new-box"><img src="index0/main2.jpg"><p>한끼 한돈 김치두루치기_완조리</p></div>
+            <div class="new-box"><img src="index0/main3.jpg"><p>잡채</p></div>
+            <div class="new-box"><img src="index0/main4.jpg"><p>한끼 한돈제육_완조리</p></div>
+        </div>
+    </section>
+    <section class="subbanner2"></section>
+    <section class="banner-wrap">
+        <div class="subbanner3"><img src="index0/sub 2.jpg"></div> 
+        <div class="subbanner4"><img src="index0/서브배너 3.jpg"></div> 
+    </section>
+<footer>
+    <div class="footer-item1">
+        <h4>고객센터</h4>
+        <h2>1588-3754</h2>
+        <p class="email">zipbanchan@sannamchon.co.kr</p>
+        <div class="time">
+            <p>평일 08:30~17:30 / 토요일 08:30~12:00</p>
+            <p>점심시간 12:00~13:00</p>
+            <p>일요일, 공휴일은 휴무입니다.</p>
+        </div>
+    </div>
+    
+    <div class="footer-item2">
+        <h4>집반찬연구소</h4>
+        <div class="info">
+            <p>인천광역시 서구 가석로 26(가좌동) 집반찬연구소 대표자 : 박종철</p>
+            <p>사업자등록번호 : 121-86-17743 통신판매업 신고번호 : 제 2023-인천서구-3834 호 개인정보보호책임자 : 정문채</p>
+            <p>제휴 문의 : zipbanchan@sannamchon.co.kr</p>
+        </div>
+        <div class="links">
+            <a href="#">집반찬연구소 소개</a> | 
+            <a href="#">이용약관</a> | 
+            <a href="#"><b>개인정보처리방침</b></a>
+        </div>
+        <p class="copy">Copyright ⓒ SANNAMCHON CORP. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
