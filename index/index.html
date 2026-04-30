@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김재은 포트폴리오</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/h" type="image/x-icon">
 </head>
 <body>
-
     <header>
         <div class="head">
             <div class="logo"><a href="#home">PORTFOLIO</a></div>
@@ -25,75 +25,68 @@
 
     <main id="home">
         <div class="main-container">
-            <div class="main-layer paper"><img src="img/main_1-1.png"></div>
-            <div class="main-layer envelope"><img src="img/main_2-1.png"></div>
+            <div class="main-layer paper"><img src="img/main_1.png"></div>
+            <div class="main-layer envelope"><img src="img/main_2.png"></div>
         </div>
     </main>
 
     <section id="about">
         <h2 class="title">It's me</h2>
-        <div class="about-content">
-            <img src="img/profile1.png" alt="프로필">
-        </div>
+        <div class="about-content"><img src="img/profile1.png" alt="프로필"></div>
     </section>
 
     <section id="project1">
         <h2 class="title">Design</h2>
         <div class="gallery">
-            <div class="box" onclick="openModal('p1')"><img src="img/box 1-1.jpg"></div>
+            <div class="box" onclick="openModal('p1')"><img src="img/box 1.jpg"></div>
             <div class="box" onclick="openModal('p2')"><img src="img/box 2.jpg"></div>
-            <div class="box" onclick="openModal('p3')"><img src="img/box 3-1.jpg"></div>
-            <div class="box" onclick="openModal('p4')"><img src="img/box 4-1.jpg"></div>
-            <div class="box" onclick="openModal('p5')"><img src="img/box5.jpg"></div>
-            <div class="box" onclick="openModal('p6')"><img src="img/box 8.jpg"></div>
+            <div class="box" onclick="openModal('p3')"><img src="img/box 3.jpg"></div>
+            <div class="box" onclick="openModal('p4')"><img src="img/box 4.jpg"></div>
+            <div class="box" onclick="openModal('p5')"><img src="img/box 5.jpg"></div>
+            <div class="box" onclick="openModal('p6')"><img src="img/box 6.jpg"></div>
         </div>
     </section>
 
     <section id="project2">
         <h2 class="title">Web Project</h2>
         <div class="gallery">
-            <div class="box" onclick="openModal('w1')"><img src="img/yxnn1-2.jpg"></div>
-            <div class="box" onclick="openModal('w2')"><img src="img/home1-1.jpg"></div>
+            <div class="box" onclick="openModal('w1')"><img src="img/yxnn.jpg"></div>
+            <div class="box" onclick="openModal('w2')"><img src="img/home.jpg"></div>
         </div>
     </section>
 
     <div id="modal" class="modal" onclick="closeModalOutside(event, 'modal')">
-    <div class="modal-content design-layout">
-        <span class="close" onclick="closeModal('modal')">&times;</span>
-        <img id="design-img" src="" style="width:100%; border-radius:10px;">
-    </div>
-</div>
-
-<div id="modal1" class="modal" onclick="closeModalOutside(event, 'modal1')">
-    <div class="modal-content web-layout"> 
-        <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <div class="modal-flex">
-            <div class="modal-left">
-                <img id="web-img" src="">
-            </div>
-            
-            <div class="modal-right">
-                <div id="web-info-container">
-                    <h2 id="web-title"></h2>
-                    <div id="web-info"></div>
-                </div>
-                
-                <div id="web-btns"></div>
+        <div class="modal-content design-layout">
+            <span class="close" onclick="closeModal('modal')">&times;</span>
+            <div id="design-info">
+                <img id="design-img" src="">
             </div>
         </div>
     </div>
-</div>
 
-<section id="contact-section">
-    <div class="about-content">
-        <img src="img/con2.png" alt="contact info" class="contact-img">
+    <div id="modal1" class="modal" onclick="closeModalOutside(event, 'modal1')">
+        <div class="modal-content web-layout"> 
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-flex">
+                <div class="modal-left"><img id="web-img" src=""></div>
+                <div class="modal-right">
+                    <h2 id="web-title"></h2>
+                    <div id="web-info"></div>
+                    <div id="web-btns"></div>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
 
-    <footer>
-        <p>© 2026 My Portfolio | yyob854@gmail.com</p>
-    </footer>
+    <section id="contact">
+        <div class="contact-box">
+            <img src="img/contect.png" alt="contact info">
+            <a href="tel:01052206168" class="contact-btn btn-phone">T. 010-5220-6168</a>
+            <a href="mailto:yyob854@gmail.com" class="contact-btn btn-email">E. yyob854@gmail.com</a>
+        </div>
+    </section>
 
+    <footer><p>© 2026 My Portfolio | yyob854@gmail.com</p></footer>
     <script src="modal.js"></script>
 </body>
 </html>
