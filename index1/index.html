@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김재은 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/h" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="logo"><a href="#home">PORTFOLIO</a></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">It's me</a></li>
+                    <li><a href="#project1">Design</a></li>
+                    <li><a href="#project2">Web Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <div class="main-container">
+            <div class="main-layer paper"><img src="img/main_1.png"></div>
+            <div class="main-layer envelope"><img src="img/main_2.png"></div>
+        </div>
+    </main>
+
+    <section id="about">
+        <h2 class="title">It's me</h2>
+        <div class="about-content"><img src="img/profile1.png" alt="프로필"></div>
+    </section>
+
+    <section id="project1">
+        <h2 class="title">Design</h2>
+        <div class="gallery">
+            <div class="box" onclick="openModal('p1')"><img src="img/box 1.jpg"></div>
+            <div class="box" onclick="openModal('p2')"><img src="img/box 2.jpg"></div>
+            <div class="box" onclick="openModal('p3')"><img src="img/box 3.jpg"></div>
+            <div class="box" onclick="openModal('p4')"><img src="img/box 4.jpg"></div>
+            <div class="box" onclick="openModal('p5')"><img src="img/box 5.jpg"></div>
+            <div class="box" onclick="openModal('p6')"><img src="img/box 6.jpg"></div>
+        </div>
+    </section>
+
+    <section id="project2">
+        <h2 class="title">Web Project</h2>
+        <div class="gallery">
+            <div class="box" onclick="openModal('w1')"><img src="img/yxnn.jpg"></div>
+            <div class="box" onclick="openModal('w2')"><img src="img/home.jpg"></div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal" onclick="closeModalOutside(event, 'modal')">
+        <div class="modal-content design-layout">
+            <span class="close" onclick="closeModal('modal')">&times;</span>
+            <div id="design-info">
+                <img id="design-img" src="">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal" onclick="closeModalOutside(event, 'modal1')">
+        <div class="modal-content web-layout"> 
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-flex">
+                <div class="modal-left"><img id="web-img" src=""></div>
+                <div class="modal-right">
+                    <h2 id="web-title"></h2>
+                    <div id="web-info"></div>
+                    <div id="web-btns"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div class="contact-box">
+            <img src="img/contect.png" alt="contact info">
+            <a href="tel:01052206168" class="contact-btn btn-phone">T. 010-5220-6168</a>
+            <a href="mailto:yyob854@gmail.com" class="contact-btn btn-email">E. yyob854@gmail.com</a>
+        </div>
+    </section>
+
+    <footer><p>© 2026 My Portfolio | yyob854@gmail.com</p></footer>
+    <script src="modal.js"></script>
+</body>
+</html>

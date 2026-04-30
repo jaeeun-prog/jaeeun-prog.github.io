@@ -1,0 +1,75 @@
+/* 1. 기본 & 헤더 */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;} a {color: black; text-decoration: none;}
+body, html { height: 100%; font-family: "Noto Sans KR", sans-serif; color: #5a524a; scroll-behavior: smooth;}
+header { width: 100%; background: rgba(255, 255, 255, 0.8); padding: 1.2rem; position: fixed; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); z-index: 1000; }
+.head { width: 90%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; max-width: 1350px; }
+.logo { font-size: 24px; font-weight: 700; } .head nav ul { display: flex; gap: 25px; }
+
+/* 2. 메인 & 애니메이션 */
+main { height: 100vh; overflow: hidden; position: relative; display: flex; justify-content: center; align-items: center; }
+.main-container { position: relative; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+.main-layer { position: absolute; opacity: 0; display: flex; justify-content: center; align-items: center; width: 100%; }
+.paper { z-index: 1; width: 85%; max-width: 1200px; animation: fadeInUp 1s ease forwards 0.6s; }
+.envelope { z-index: 2; width: 95%; max-width: 1350px; animation: fadeInUp 1s ease forwards 0.9s; }
+.main-layer img { width: 100%; height: auto; display: block; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+#about { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 0; }
+.about-content { width: 95%; max-width: 1350px; opacity: 0; transform: translateY(50px); transition: 1s; }
+#about.reveal .about-content { opacity: 1; transform: translateY(0); }
+
+/* 3. 갤러리 섹션 */
+section { padding: 100px 0; display: flex; flex-direction: column; align-items: center; scroll-margin-top: 80px; }
+.title { font-size: 28px; margin-bottom: 50px; text-transform: uppercase; }
+.gallery { max-width: 1350px; width: 95%; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.box { width: calc(33.333% - 20px); cursor: pointer; border-radius: 15px; overflow: hidden; transition: 0.3s; aspect-ratio: 4 / 3; }
+.box:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+.box img { width: 100%; height: 100%; object-fit: cover; }
+
+/* 4. 모달 공통 - 닫기 버튼 및 스크롤바 숨김 복구 */
+.modal { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; }
+.modal-content { 
+    padding: 70px 50px 50px 50px; background: white; border-radius: 20px; position: relative; 
+    width: 90%; max-width: 1250px; max-height: 90vh; 
+    overflow-y: auto; -ms-overflow-style: none; scrollbar-width: none; /* 🔴 스크롤바 숨김 */
+}
+.modal-content::-webkit-scrollbar { display: none; } /* 🔴 크롬 스크롤바 숨김 */
+
+.close { position: absolute; right: 40px; top: 12px; font-size: 40px; cursor: pointer; color: #333; z-index: 100; }
+
+/* 디자인 레이아웃 */
+.design-layout img { width: 100%; height: auto; border-radius: 10px; display: block; }
+
+/* 🔴 웹 프로젝트 레이아웃 (정렬 최적화) */
+.web-layout .modal-flex { display: flex; gap: 50px; align-items: flex-start; width: 100%; }
+.web-layout .modal-left { flex: 0.7; line-height: 0; } 
+.web-layout .modal-left img { width: 100%; height: auto; display: block; border-radius: 15px; box-shadow: none; }
+.web-layout .modal-right { flex: 1; display: flex; flex-direction: column; align-self: stretch; text-align: left; }
+
+#web-title { font-size: 32px; font-weight: 800; margin-bottom: 25px; color: #222; margin-top: 0; }
+#web-info p { margin-bottom: 12px; display: flex; align-items: flex-start; font-size: 16px; color: #444; line-height: 1.6; }
+
+/* 🔴 텍스트 시작 위치 맞춤 핵심 */
+.info-label { display: inline-block; width: 120px; flex-shrink: 0; font-weight: 700; color: #222; }
+.overview-text { display: block; word-break: keep-all; }
+
+#web-btns { margin-top: auto; display: flex; gap: 15px; padding-top: 30px; }
+.modal-btn { padding: 12px 30px; border: 1px solid #444; border-radius: 30px; color: #444; font-size: 15px; font-weight: 500; transition: 0.3s; background: #fff; cursor: pointer; display: inline-block; text-align: center; }
+.modal-btn:hover { background: #444; color: #fff; }
+
+/* 모바일 대응 */
+@media (max-width: 1024px) {
+    .web-layout .modal-flex { flex-direction: column; gap: 30px; align-items: center; }
+    .web-layout .modal-right { text-align: center; align-items: center; }
+    #web-btns { margin-top: 30px; }
+}
+
+/* 5. 컨택트 섹션 & 푸터 */
+#contact { padding: 80px 0 20px; display: flex; justify-content: center; scroll-margin-top: 80px; }
+.contact-box { width: 95%; max-width: 1350px; position: relative; line-height: 0; }
+.contact-box img { width: 100%; height: auto; display: block; border-radius: 15px; }
+.contact-btn { position: absolute; bottom: 40%; padding: 17px 40px 19px; border: 2px solid #81a2c2; border-radius: 50px; color: #81a2c2; font-weight: 800; font-size: 19px; background: rgba(255,255,255,0.85); transition: 0.3s; line-height: 1; text-align: center; white-space: nowrap; }
+.contact-btn:hover { background: #81a2c2; color: #fff; }
+.btn-phone { left: 35%; transform: translateX(-50%); }
+.btn-email { right: 35%; transform: translateX(50%); }
+footer { text-align: center; padding: 2rem 0; border-top: 1px solid #eee; }
